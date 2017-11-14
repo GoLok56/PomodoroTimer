@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvCurrentState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tvMinute"
+            android:layout_alignEnd="@+id/tvSecond"
+            android:layout_marginBottom="8dp"
+            android:text="@string/stop_label"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvMinute"
+            style="@style/timerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCurrentState"
+            tools:text="25" />
+
+        <TextView
+            android:id="@+id/tvSeparator"
+            style="@style/timerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCurrentState"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@id/tvMinute"
+            android:text="@string/time_separator" />
+
+        <TextView
+            android:id="@+id/tvSecond"
+            style="@style/timerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCurrentState"
+            android:layout_toEndOf="@id/tvSeparator"
+            tools:text="00" />
+
+        <TextView
+            android:id="@+id/tvMinuteLabel"
+            style="@style/timerLabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvMinute"
+            android:text="@string/minute_label"
+            android:textSize="20sp" />
+        z
+
+        <TextView
+            android:id="@+id/tvSecondLabel"
+            style="@style/timerLabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSecond"
+            android:layout_toEndOf="@id/tvSeparator"
+            android:text="@string/second_label" />
+
+        <TextView
+            android:id="@+id/tvCurrentSession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/tvSecondLabel"
+            android:layout_alignStart="@id/tvMinuteLabel"
+            android:layout_below="@id/tvMinuteLabel"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            tools:text="Sesi ke-1" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnStartTimer"
+        style="@style/button_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start_timer_label" />
+
+</LinearLayout>
